@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <title>Калькулятор</title>
+</head>
+<body style="padding:50px;">
+       <h2 class="mb-3" style="text-align: center">Калькулятор срока беременности:</h2>
+<main class="container" style="width:350px;">
+    <form action="{{ url_for('handle_data') }}" method="post">
+        <label class="form-label">Укажите дату последней менструации:</label>
+        <input class="form-control" required style="font-family: SansSerif; font-size: 14px; width: 150px" type="date" name="MDT" id="MDT">
+        <p></p>
+        <label class="form-label" >Укажите дату прохождения УЗИ:</label>
+        <input class="form-control" required style="font-family: SansSerif; font-size: 14px; width: 150px" type="date" name="UDT" id="UDT">
+        <p></p>
+        <label class="form-label" >Укажите срок беременности по УЗИ:</label>
+        <input class="form-control" required type="number" style="font-family: SansSerif; width: 90px; font-size: 14px" name="USN" id="USN" placeholder="Недель"/>
+        <br>
+        <input class="form-control" required type="number" style="font-family: SansSerif; width: 90px; font-size: 14px" name="USD" id="USD" placeholder="Дней"/>
+        <br>
+        <input class="btn btn-primary" required type="submit" value="Рассчитать">
+        <p></p>
+        <textarea class="form-control" rows="3" readonly= "1" style="font-family: SansSerif; font-size: 14px" name="message" id="message"  id="RESULT" placeholder=>{{ def_text }}</textarea>
+        <br>
+    </form>
+    </main>
+</body>
+</html>
