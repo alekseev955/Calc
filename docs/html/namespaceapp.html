@@ -72,16 +72,22 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
 <tr class="memitem:a7d97ce30624b6b4b4fd86ab30f197fc4"><td class="memItemLeft" align="right" valign="top">datetime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceapp.html#a7d97ce30624b6b4b4fd86ab30f197fc4">make_date_from_str</a> (str date_string, str template=&quot;%Y-%m-%d&quot;)</td></tr>
+<tr class="memdesc:a7d97ce30624b6b4b4fd86ab30f197fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция перевода даты из str в datetime-объект  <a href="namespaceapp.html#a7d97ce30624b6b4b4fd86ab30f197fc4">Подробнее...</a><br /></td></tr>
 <tr class="separator:a7d97ce30624b6b4b4fd86ab30f197fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aece9f1ff176a33d482d5668a8b77f890"><td class="memItemLeft" align="right" valign="top">timedelta&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceapp.html#aece9f1ff176a33d482d5668a8b77f890">count_pregnacy_time</a> (datetime start_date, datetime current_date=datetime.now())</td></tr>
+<tr class="memdesc:aece9f1ff176a33d482d5668a8b77f890"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для расчёта срока беременности  <a href="namespaceapp.html#aece9f1ff176a33d482d5668a8b77f890">Подробнее...</a><br /></td></tr>
 <tr class="separator:aece9f1ff176a33d482d5668a8b77f890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3446864280ca198d05c3de2f8c5e2484"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceapp.html#a3446864280ca198d05c3de2f8c5e2484">data_to_weeks</a> (timedelta pregnacy_delta)</td></tr>
+<tr class="memdesc:a3446864280ca198d05c3de2f8c5e2484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для перевода срока беременности в формат недели/дни  <a href="namespaceapp.html#a3446864280ca198d05c3de2f8c5e2484">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3446864280ca198d05c3de2f8c5e2484"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa686570b53dfa8f177f1a4eff0cac040"><td class="memItemLeft" align="right" valign="top">str&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceapp.html#aa686570b53dfa8f177f1a4eff0cac040">period</a> (str str_date)</td></tr>
+<tr class="memdesc:aa686570b53dfa8f177f1a4eff0cac040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для вывода даты в неделях  <a href="namespaceapp.html#aa686570b53dfa8f177f1a4eff0cac040">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa686570b53dfa8f177f1a4eff0cac040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a562146490ce954c1708a2f4a31e768e3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceapp.html#a562146490ce954c1708a2f4a31e768e3">index</a> ()</td></tr>
+<tr class="memdesc:a562146490ce954c1708a2f4a31e768e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция для генерации index.html.  <a href="namespaceapp.html#a562146490ce954c1708a2f4a31e768e3">Подробнее...</a><br /></td></tr>
 <tr class="separator:a562146490ce954c1708a2f4a31e768e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b196c8b037c5c629d43600b14066c7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceapp.html#ac2b196c8b037c5c629d43600b14066c7">handle_data</a> ()</td></tr>
+<tr class="memdesc:ac2b196c8b037c5c629d43600b14066c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Расчёт параметров, рендер HTML-шаблона  <a href="namespaceapp.html#ac2b196c8b037c5c629d43600b14066c7">Подробнее...</a><br /></td></tr>
 <tr class="separator:ac2b196c8b037c5c629d43600b14066c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -119,8 +125,17 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Считает разницу между датами (объектами дат)
-</pre> 
+
+<p>Функция для расчёта срока беременности </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start_date</td><td>прочитанная с HTML-формы дата </td></tr>
+    <tr><td class="paramname">current_date</td><td>текущая дата </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>результат расчёта дельты </dd></dl>
+
 </div>
 </div>
 <a id="a3446864280ca198d05c3de2f8c5e2484"></a>
@@ -139,6 +154,15 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>Функция для перевода срока беременности в формат недели/дни </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pregnacy_delta</td><td>рассчитанный срок </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>результат в днях и неделях </dd></dl>
+
 </div>
 </div>
 <a id="ac2b196c8b037c5c629d43600b14066c7"></a>
@@ -156,6 +180,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>Расчёт параметров, рендер HTML-шаблона </p>
+<dl class="section return"><dt>Возвращает</dt><dd>HTML-страница с результатом вычислений </dd></dl>
+
 </div>
 </div>
 <a id="a562146490ce954c1708a2f4a31e768e3"></a>
@@ -172,6 +199,9 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Функция для генерации index.html. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>HTML-страница </dd></dl>
 
 </div>
 </div>
@@ -200,9 +230,18 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Переводит дату из строки заданнаго формата в объект datetime.
-Можно указать только дату, и пользоваться дефорлтным шаблоном "%Y-%m-%d"
-</pre> 
+
+<p>Функция перевода даты из str в datetime-объект </p>
+<p>При чтении HTML-формы приложения получаем дату в str-формате</p>
+<p>Её необходимо перевести в читаемый формат datetime для последующей машинной обработки </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date_string</td><td>дата в строчном формате </td></tr>
+    <tr><td class="paramname">template</td><td>шаблон входных данных </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>объект даты </dd></dl>
+
 </div>
 </div>
 <a id="aa686570b53dfa8f177f1a4eff0cac040"></a>
@@ -220,6 +259,15 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Функция для вывода даты в неделях </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str_date</td><td>дата в str-представлении </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>результат в неделях </dd></dl>
 
 </div>
 </div>

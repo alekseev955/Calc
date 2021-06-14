@@ -4,24 +4,35 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
+## \brief Функция перевода даты из str в datetime-объект
+## \details При чтении HTML-формы приложения получаем дату в str-формате
+## \details Её необходимо перевести в читаемый формат datetime для последующей машинной обработки
+## \param date_string дата в строчном формате
+## \param template шаблон входных данных
+## \return объект даты
+
 
 def make_date_from_str(date_string: str, template: str = "%Y-%m-%d") -> datetime:
-    """
-    Переводит дату из строки заданнаго формата в объект datetime.
-    Можно указать только дату, и пользоваться дефорлтным шаблоном "%Y-%m-%d"
-    """
+
     date_obj = datetime.strptime(date_string, template)
 
     return date_obj
 
+## \brief Функция для расчёта срока беременности
+## \param start_date прочитанная с HTML-формы дата
+## \param current_date текущая дата
+## \return результат расчёта дельты
+
 
 def count_pregnacy_time(start_date: datetime, current_date: datetime = datetime.now()) -> timedelta:
-    """
-    Считает разницу между датами (объектами дат)
-    """
+
     pregnacy_delta = current_date - start_date
 
     return pregnacy_delta
+
+## \brief Функция для перевода срока беременности в формат недели/дни
+## \param pregnacy_delta рассчитанный срок
+## \return результат в днях и неделях
 
 
 def data_to_weeks(pregnacy_delta: timedelta) -> str:
@@ -31,6 +42,10 @@ def data_to_weeks(pregnacy_delta: timedelta) -> str:
     result = f"{weeks} нед. {days} дн."
 
     return result
+
+## \brief Функция для вывода даты в неделях
+## \param str_date дата в str-представлении
+## \return результат в неделях
 
 
 def period(str_date: str) -> str:
@@ -44,11 +59,15 @@ def period(str_date: str) -> str:
 
 
 @app.route('/', methods=['GET', 'POST'])
+## \brief Функция для генерации index.html
+## \return HTML-страница
 def index():
     return render_template('index.html')
 
 
 @app.route('/calc', methods=['GET', 'POST'])
+## \brief Расчёт параметров, рендер HTML-шаблона
+## \return HTML-страница с результатом вычислений
 def handle_data():
     mdt = request.form['MDT']
     udt = request.form['UDT']
