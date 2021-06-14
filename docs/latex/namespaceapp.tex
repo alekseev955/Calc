@@ -1,0 +1,91 @@
+\hypertarget{namespaceapp}{}\doxysection{Пространство имен app}
+\label{namespaceapp}\index{app@{app}}
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+datetime \mbox{\hyperlink{namespaceapp_a7d97ce30624b6b4b4fd86ab30f197fc4}{make\+\_\+date\+\_\+from\+\_\+str}} (str date\+\_\+string, str template=\char`\"{}\%Y-\/\%m-\/\%d\char`\"{})
+\item 
+timedelta \mbox{\hyperlink{namespaceapp_aece9f1ff176a33d482d5668a8b77f890}{count\+\_\+pregnacy\+\_\+time}} (datetime start\+\_\+date, datetime current\+\_\+date=datetime.\+now())
+\item 
+str \mbox{\hyperlink{namespaceapp_a3446864280ca198d05c3de2f8c5e2484}{data\+\_\+to\+\_\+weeks}} (timedelta pregnacy\+\_\+delta)
+\item 
+str \mbox{\hyperlink{namespaceapp_aa686570b53dfa8f177f1a4eff0cac040}{period}} (str str\+\_\+date)
+\item 
+def \mbox{\hyperlink{namespaceapp_a562146490ce954c1708a2f4a31e768e3}{index}} ()
+\item 
+def \mbox{\hyperlink{namespaceapp_ac2b196c8b037c5c629d43600b14066c7}{handle\+\_\+data}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceapp_a675b4ea702c13dc4b8c05f985a25b496}{app}} = Flask(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespaceapp_ae996542be63ac459a38531f7c2dd0a49}{port}} = int(os.\+environ.\+get(\textquotesingle{}PORT\textquotesingle{}, 5000))
+\item 
+\mbox{\hyperlink{namespaceapp_a7fa7c11c7474c128736b1d34b15a0d5e}{host}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{namespaceapp_aece9f1ff176a33d482d5668a8b77f890}\label{namespaceapp_aece9f1ff176a33d482d5668a8b77f890}} 
+\index{app@{app}!count\_pregnacy\_time@{count\_pregnacy\_time}}
+\index{count\_pregnacy\_time@{count\_pregnacy\_time}!app@{app}}
+\doxysubsubsection{\texorpdfstring{count\_pregnacy\_time()}{count\_pregnacy\_time()}}
+{\footnotesize\ttfamily  timedelta app.\+count\+\_\+pregnacy\+\_\+time (\begin{DoxyParamCaption}\item[{datetime}]{start\+\_\+date,  }\item[{datetime }]{current\+\_\+date = {\ttfamily datetime.now()} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Считает разницу между датами (объектами дат)
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceapp_a3446864280ca198d05c3de2f8c5e2484}\label{namespaceapp_a3446864280ca198d05c3de2f8c5e2484}} 
+\index{app@{app}!data\_to\_weeks@{data\_to\_weeks}}
+\index{data\_to\_weeks@{data\_to\_weeks}!app@{app}}
+\doxysubsubsection{\texorpdfstring{data\_to\_weeks()}{data\_to\_weeks()}}
+{\footnotesize\ttfamily  str app.\+data\+\_\+to\+\_\+weeks (\begin{DoxyParamCaption}\item[{timedelta}]{pregnacy\+\_\+delta }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceapp_ac2b196c8b037c5c629d43600b14066c7}\label{namespaceapp_ac2b196c8b037c5c629d43600b14066c7}} 
+\index{app@{app}!handle\_data@{handle\_data}}
+\index{handle\_data@{handle\_data}!app@{app}}
+\doxysubsubsection{\texorpdfstring{handle\_data()}{handle\_data()}}
+{\footnotesize\ttfamily def app.\+handle\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceapp_a562146490ce954c1708a2f4a31e768e3}\label{namespaceapp_a562146490ce954c1708a2f4a31e768e3}} 
+\index{app@{app}!index@{index}}
+\index{index@{index}!app@{app}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily def app.\+index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespaceapp_a7d97ce30624b6b4b4fd86ab30f197fc4}\label{namespaceapp_a7d97ce30624b6b4b4fd86ab30f197fc4}} 
+\index{app@{app}!make\_date\_from\_str@{make\_date\_from\_str}}
+\index{make\_date\_from\_str@{make\_date\_from\_str}!app@{app}}
+\doxysubsubsection{\texorpdfstring{make\_date\_from\_str()}{make\_date\_from\_str()}}
+{\footnotesize\ttfamily  datetime app.\+make\+\_\+date\+\_\+from\+\_\+str (\begin{DoxyParamCaption}\item[{str}]{date\+\_\+string,  }\item[{str }]{template = {\ttfamily \char`\"{}\%Y-\/\%m-\/\%d\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Переводит дату из строки заданнаго формата в объект datetime.
+Можно указать только дату, и пользоваться дефорлтным шаблоном "%Y-%m-%d"
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespaceapp_aa686570b53dfa8f177f1a4eff0cac040}\label{namespaceapp_aa686570b53dfa8f177f1a4eff0cac040}} 
+\index{app@{app}!period@{period}}
+\index{period@{period}!app@{app}}
+\doxysubsubsection{\texorpdfstring{period()}{period()}}
+{\footnotesize\ttfamily  str app.\+period (\begin{DoxyParamCaption}\item[{str}]{str\+\_\+date }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Переменные}
+\mbox{\Hypertarget{namespaceapp_a675b4ea702c13dc4b8c05f985a25b496}\label{namespaceapp_a675b4ea702c13dc4b8c05f985a25b496}} 
+\index{app@{app}!app@{app}}
+\index{app@{app}!app@{app}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily app.\+app = Flask(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+
+\mbox{\Hypertarget{namespaceapp_a7fa7c11c7474c128736b1d34b15a0d5e}\label{namespaceapp_a7fa7c11c7474c128736b1d34b15a0d5e}} 
+\index{app@{app}!host@{host}}
+\index{host@{host}!app@{app}}
+\doxysubsubsection{\texorpdfstring{host}{host}}
+{\footnotesize\ttfamily app.\+host}
+
+\mbox{\Hypertarget{namespaceapp_ae996542be63ac459a38531f7c2dd0a49}\label{namespaceapp_ae996542be63ac459a38531f7c2dd0a49}} 
+\index{app@{app}!port@{port}}
+\index{port@{port}!app@{app}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily app.\+port = int(os.\+environ.\+get(\textquotesingle{}PORT\textquotesingle{}, 5000))}
+
